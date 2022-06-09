@@ -1,7 +1,7 @@
 {
-  "name": "@xituru/typescript-package-boilerplate",
-  "version": "1.0.1",
-  "description": "Template starter for creating npm package with typescript",
+  "name": "@xituru/round-robin",
+  "version": "0.1.0",
+  "description": "A simple and fast round robin scheduler.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "unpkg": "dist/umd/index.js",
@@ -23,13 +23,13 @@
     "esm",
     "umd"
   ],
-  "homepage": "https://github.com/xituru/typescript-package-boilerplate",
+  "homepage": "https://github.com/xituru/round-robin",
   "repository": {
     "type": "git",
-    "url": "git@github.com:xituru/typescript-package-boilerplate.git"
+    "url": "git@github.com:xituru/round-robin.git"
   },
   "bugs": {
-    "url": "https://github.com/xituru/typescript-package-boilerplate/issues"
+    "url": "https://github.com/xituru/round-robin/issues"
   },
   "scripts": {
     "build": "run-p build:*",

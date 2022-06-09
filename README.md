@@ -1,65 +1,15 @@
-# typescript-package-boilerplate
+# Round Robin
 
-[![npm package](https://img.shields.io/badge/npm%20i-@xituru/typescript--package--boilerplate-brightgreen)](https://www.npmjs.com/package/@xituru/typescript-package-boilerplate)
-[![version number](https://img.shields.io/npm/v/@xituru/typescript-package-boilerplate?color=green&label=version)](https://github.com/xituru/typescript-package-boilerplate/releases)
-[![Actions Status](https://github.com/xituru/typescript-package-boilerplate/workflows/Test/badge.svg)](https://github.com/xituru/typescript-package-boilerplate/actions)
-[![License](https://img.shields.io/github/license/xituru/typescript-package-boilerplate)](https://github.com/xituru/typescript-package-boilerplate/blob/main/LICENSE)
+[![npm package](https://img.shields.io/badge/npm%20i-@xituru/round--robin-brightgreen)](https://www.npmjs.com/package/@xituru/round-robin) [![version number](https://img.shields.io/npm/v/@xituru/round-robin?color=green&label=version)](https://github.com/xituru/round-robin/releases) [![Actions Status](https://github.com/xituru/round-robin/workflows/Release%20&%20Publish/badge.svg)](https://github.com/xituru/round-robin/actions) [![License](https://img.shields.io/github/license/xituru/round-robin)](https://github.com/xituru/round-robin/blob/main/LICENSE)
 
-- [x] CI Publishing & Release
-- [x] Multiple Formats (CJS, ESM & UMD)
-- [x] Unit test with Jest
-- [x] Code linter with TSLint
-- [x] Commit linter with CommitLint & Husky
+- [ ] No limitation in numbers
+- [x] Each contestant meets every other participant
 
 ## Installation
 
 ```bash
-$ npm install
+$ npm install @xituru/round-robin
 ```
 
-## Build
-
-```bash
-# build multiple formats cjs, esm, and umd
-$ npm run build
-
-# build cjs format
-$ npm run build:cjs
-
-# build esm format
-$ npm run build:esm
-
-# build esm format
-$ npm run build:umd
-```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# test coverage
-$ npm run coverage
-```
-
-See `scripts` in `package.json` for other predefined script commands.
-
-## Publishing & Release
-
-This template is configured to use GitHub Actions CI/CD and [semantic-release](https://github.com/semantic-release/semantic-release) to automate Publishing to npm & Github Packages registry and Github Release.
-
-- Every time a pull request is submitted on master or main branch, it will automatically tested against multiple OS and Node.js versions with GitHub Actions.
-- Every time a push is submitted on master or main branch, it will automatically determine the type of release using [@semantic-release/commit-analyzer](https://github.com/semantic-release/commit-analyzer) also publish it to the registry, and this package is using default configuration, to modify the configuration just go there for more information.
-
-### CI Publishing
-
-This template is using extra plugin [@amanda-mitchell/semantic-release-npm-multiple](https://github.com/amanda-mitchell/semantic-release-npm-multiple) for publishing to registry, to modify the configuration just go there for more information.
-
-### CI Release
-
-This template is using extra plugin [@semantic-release/github](https://github.com/semantic-release/github) for releasing to Github Release, to modify the configuration just go there for more information.
-
-## Support
-
-For feedbacks or issues, check out the [Issues](https://github.com/xituru/typescript-package-boilerplate/issues).
+<!-- TODO -->
+<!-- ## Usage -->
