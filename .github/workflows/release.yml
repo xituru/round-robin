@@ -1,0 +1,42 @@
+name: Release & Publish
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  test:
+    uses: xituru/typescript-package-boilerplate/.github/workflows/test.yml@main
+
+  release:
+    needs: [test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Setup Node to publish to npm
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        env:
+          CI: true
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        if: success()
+        run: yarn build
+
+      - name: Semantic Release
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_NPM_CONFIG_REGISTRY: https://npm.pkg.github.com/
+          PUBLIC_NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          PUBLIC_NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
+        run: yarn semantic-release

@@ -1,0 +1,28 @@
+name: Matrix Node Test & Lint CI
+
+on:
+  - workflow_call
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-latest]
+        node: [14, 16]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Linter
+        run: yarn lint
+
+      - name: Run tests
+        run: yarn test
