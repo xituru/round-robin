@@ -1,6 +1,6 @@
 {
   "name": "@xituru/round-robin",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A simple and fast round robin scheduler.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
