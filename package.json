@@ -17,8 +17,10 @@
     "typescript",
     "npm",
     "package",
-    "boilerplate",
-    "starter",
+    "round-robin",
+    "scheduler",
+    "tournament",
+    "bracket",
     "cjs",
     "esm",
     "umd"
