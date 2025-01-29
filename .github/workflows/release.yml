@@ -8,24 +8,23 @@ on:
 
 jobs:
   test:
-    uses: xituru/typescript-package-boilerplate/.github/workflows/test.yml@main
+    uses: ./.github/workflows/test.yml
 
   release:
     needs: [test]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
+      - uses: actions/checkout@v4
       - name: Setup Node to publish to npm
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
+      - run: corepack enable
 
       - name: Install dependencies
         env:
           CI: true
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Build
         if: success()
